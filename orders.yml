@@ -1,0 +1,17 @@
+cubes:
+  - name: orders
+    sql_table: orders
+
+    dimensions:
+      - name: order_id
+        sql: order_id
+        type: string
+        primary_key: true
+
+      - name: order_date
+        sql: order_date
+        type: time
+
+    measures:
+      - name: count
+        type: count
