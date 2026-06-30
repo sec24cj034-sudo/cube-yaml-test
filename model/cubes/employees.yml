@@ -1,0 +1,37 @@
+cubes:
+  - name: employees
+    sql_table: employees
+
+    dimensions:
+      - name: employee_id
+        sql: employee_id
+        type: number
+        primary_key: true
+
+      - name: employee_name
+        sql: employee_name
+        type: string
+
+      - name: department
+        sql: department
+        type: string
+
+      - name: designation
+        sql: designation
+        type: string
+
+      - name: joining_date
+        sql: joining_date
+        type: time
+
+    measures:
+      - name: count
+        type: count
+
+      - name: total_salary
+        sql: salary
+        type: sum
+
+      - name: average_salary
+        sql: salary
+        type: avg
